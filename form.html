@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Natural Disaster Prediction System</title>
+</head>
+<body>
+    <h1>Natural Disaster Prediction System</h1>
+    <form action="/predict" method="post">
+        <label for="latitude">Latitude:</label><br>
+        <input type="text" id="latitude" name="latitude"><br>
+
+        <label for="longitude">Longitude:</label><br>
+        <input type="text" id="longitude" name="longitude"><br>
+
+        <label for="temperature">Temperature (°C):</label><br>
+        <input type="text" id="temperature" name="temperature"><br>
+
+        <label for="humidity">Humidity (%):</label><br>
+        <input type="text" id="humidity" name="humidity"><br>
+
+        <label for="pressure">Atmospheric Pressure (hPa):</label><br>
+        <input type="text" id="pressure" name="pressure"><br>
+
+        <label for="windSpeed">Wind Speed (km/h):</label><br>
+        <input type="text" id="windSpeed" name="windSpeed"><br>
+
+        <label for="precipitation">Precipitation (mm):</label><br>
+        <input type="text" id="precipitation" name="precipitation"><br>
+
+        <label for="seismicActivity">Seismic Activity (Richter scale):</label><br>
+        <input type="text" id="seismicActivity" name="seismicActivity"><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    <div id="prediction-result">
+        <!-- The prediction results will be displayed here -->
+        {% if result %}
+            <h2>Prediction Result (Disaster or Not):</h2>
+            <p>{{ result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
